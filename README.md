@@ -1,4 +1,7 @@
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/main
 # それどこですか？　〜Android版、家の物事整理帳〜
 
 ## サイト概要
@@ -55,4 +58,8 @@ https://docs.google.com/spreadsheets/d/1tLS2u2MT6QTNG8W_L4oTintDw2KzT7LZe-r2bRXi
 ## 使用素材
 (使用時に逐次URLを追加、以下の項目は素材利用時の個人的な覚書)
 - 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+<<<<<<< HEAD
 - 使用しない場合は、使用素材の項目をREADMEから削除してください。
+=======
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。
+>>>>>>> origin/main
