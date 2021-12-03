@@ -1,10 +1,10 @@
 <div class = "d-flex flex-row">
   <%= render 'layouts/link_to', text: "ホームへ", path: root_path, verb: :get, add: "btn-primary" %>
   <% if user_signed_in? %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-primary btn m-2", role: "button" %>
+    <%= render 'layouts/link_to', text: "ログアウト", path: destroy_user_session_path, verb: :delete, add: "btn-primary" %>
   <% else %>
-    <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary btn m-2", role: "button" %>
-    <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary btn m-2", role: "button" %>
+    <%= render 'layouts/link_to', text: "新規登録", path: new_user_registration_path, verb: :get, add: "btn-primary" %>
+    <%= render 'layouts/link_to', text: "ログイン", path: new_user_session_path, verb: :get, add: "btn-primary" %>
   <% end %>
 </div>
 <li>--Controller:<% controller_name %> --Act:<%= action_name %> --Method:<%= request.method %> --Path:<%= request.fullpath %></li>
