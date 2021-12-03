@@ -5,25 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script src="https://kit.fontawesome.com/e96e7bc039.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <header>
-    <% if user_signed_in? %>
-      <li>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to "新規登録", new_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to "ログイン", new_user_session_path %>
-      </li>
-    <% end %>
-    <li>--Controller:<% controller_name %> --Act:<%= action_name %> --Method:<%= request.method %> --Path:<%= request.fullpath %></li>
-    <li>Ago:<%= request.referer %></li>
+  <header class = "shadow mb-3">
+    <%= render 'layouts/header' %>
   </header>
   <body>
     <div class = "container-fliud p-3 bg-light">
@@ -31,16 +19,8 @@
     </div>
   </body>
   <% if user_signed_in? %>
-    <footer>
-      <h1>footerだよ</h1>
-      <div class = "container-fliud p-3">
-        <div class = "row">
-          <div class = "col-3 bg-danger py-5"></div>
-          <div class = "col-3 bg-warning py-4"></div>
-          <div class = "col-3 bg-success py-3"></div>
-          <div class = "col-3 bg-info py-2"></div>
-        </div>
-      </div>
+    <footer class = "bg-dark">
+      <%= render 'layouts/footer' %>
     </footer>
   <% else %>
   <% end %>
