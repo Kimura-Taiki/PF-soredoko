@@ -1,0 +1,15 @@
+<h1>Homes#modal</h1>
+<p>Find me in app/views/homes/modal.html.erb</p>
+
+<div class="box bg-danger m-3" draggable="true"></div>
+<div id="dropzone" class="dropzone bg-light border border-dark m-3"></div>
+
+<script>
+  $('#box').on('dragstart', onDragStart);
+  $('#dropzone').on('dragover', onDragOver);
+  $('#dropzone').on('drop', onDrop);
+</script>
+
+<!--参考サイト
+https://www.codegrid.net/articles/2014-html5-api-1
+-->

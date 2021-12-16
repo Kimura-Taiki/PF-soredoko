@@ -18,3 +18,23 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+// モーダル用途
+
+// $('#box').on('dragstart', onDragStart);
+// $('#dropzone').on('dragover', onDragOver);
+// $('#dropzone').on('drop', onDrop);
+
+function onDragStart(e) {
+  e.originalEvent.dataTransfer.setData('text', this.id);
+}
+
+function onDragOver(e) {
+  e.preventDefault();
+  this.textContent = 'onDragOver';
+}
+
+function onDrop(e) {
+  e.preventDefault();
+  this.textContent = 'onDrop';
+}
