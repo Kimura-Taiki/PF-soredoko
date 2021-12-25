@@ -3,16 +3,23 @@
 <div class = "row h1">最近の登録</div>
 <div class = "row d-flex">
   <% @items.each do |i| %>
-    <div class = "col-xs-12 col-sm-6 col-md-4 col-lg-3 border mb-2">
+    <div class = "col-xs-12 col-sm-6 col-md-4 col-lg-3 border border-dark mb-2">
       <% if i.image_id %>
         <%= attachment_image_tag i, :image, class: "w-100 h-75 objecvt-fit-cover" %>
       <% else %>
-        <div class = "w-100 h-75">
-          <p class = "h2"><%= i.name %></p>
-          <p class = "h4"><%= i.introduction %></p>
+        <div class = "w-100 h-75 blank-image">
+          <p class = "h2 non-muted"><%= i.name %></p>
+          <p class = "h4 non-muted"><%= i.introduction %></p>
         </div>
       <% end %>
-      <div class = "w-75 border-bottom mx-auto"></div>
+      <div class = "w-75 border-bottom border-primary mx-auto"></div>
+      <div class="tag-box mt-1">
+        <% i.tags.each do |t| %>
+          <span class="btn btn-info mb-1"><%= t.name %></span>
+        <% end %>
+        <span class="btn btn-info mb-1">仮想タグだよ</span>
+        </div>
+      <div class = "w-75 border-bottom border-primary mx-auto"></div>
       <p class = "h4">in <%= i.position %></p>
     </div>
   <% end %>
