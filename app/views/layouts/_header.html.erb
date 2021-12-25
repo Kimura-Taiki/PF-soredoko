@@ -7,5 +7,5 @@
     <%= render 'layouts/link_to', text: "ログイン", path: new_user_session_path, verb: :get, add: "btn-primary" %>
   <% end %>
 </div>
-<li>--Controller:<% controller_name %> --Act:<%= action_name %> --Method:<%= request.method %> --Path:<%= request.fullpath %></li>
+<li>--Controller:<% controller.controller_name %> --Act:<%= action_name %> --Method:<%= request.method %> --Path:<%= request.fullpath %></li>
 <li>Ago:<%= request.referer %></li>

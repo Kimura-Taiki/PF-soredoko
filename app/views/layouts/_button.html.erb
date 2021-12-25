@@ -1,0 +1,8 @@
+<%= link_to path, class: "col text-center text-muted py-2" do %>
+  <div class = "jjj<%= ' text-warning' if action_name == act %>">
+    <i class = "<%= icon %> fas fa-2x"></i>
+    </br>
+    <p class = "my-0"><%= text %></p>
+    <%= action_name %> <%= act %>
+  </div>
+<% end %>

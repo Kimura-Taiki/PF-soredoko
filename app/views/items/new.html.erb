@@ -1,0 +1,17 @@
+<h1>Items#new</h1>
+<p>Find me in app/views/items/new.html.erb</p>
+<%= form_with model: @item, local: true do |i| %>
+  <%= i.label :name, "アイテム名" %>
+  <%= i.text_field :name, class: "w-100 mb-2" %>
+  </br>
+  <%= i.label :position, "場所" %>
+  <%= i.text_field :position, class: "w-100 mb-2" %>
+  </br>
+  <%= i.label :image, "画像" %>
+  <%= i.attachment_field :image, class: "w-100 mb-2" %>
+  </br>
+  <%= i.label :introduction, "詳細" %>
+  <%= i.text_area :introduction, class: "w-100 mb-2" %>
+  <%= hidden_field_tag :user_id, current_user.id %>
+  <%= i.submit '登録' %>
+<% end %>
